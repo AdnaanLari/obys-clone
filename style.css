@@ -1,0 +1,135 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+/* @font-face {
+    font-family: ;
+    src: url(Fonts/KFOlCnqEu92Fr1MmEU9fBBc4.ttf);
+}
+@font-face {
+    font-family: ;
+    src: url(Fonts/KFOmCnqEu92Fr1Mu4mxK.ttf);
+} */
+@font-face {
+    font-family: "Plain Light";
+    src: url(Fonts/plain-light-webfont.ttf);
+    font-weight: light;
+}
+@font-face {
+    font-family:"Plain Light" ;
+    src: url(Fonts/plain-regular-webfont.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family:"Silk serif" ;
+    src: url(Fonts/silkserif-lightitalic-webfont.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: "Silkserif";
+    src: url(Fonts/silkserif-regularitalic-webfont.ttf);
+    font-style: normal;
+}
+#main
+{
+    position: relative;
+    background-color: #030303;
+}
+#page1
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+#loader
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #030303;
+    padding: 20vh 10vw;
+}
+.line
+{
+    height: 8vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+#line1
+{
+    display: flex;
+    gap:1.4vw;
+    align-items: top;
+    margin-right: 4vw;
+    height: 18vh;
+}
+#line1 h5 , h6
+{
+    font-size: 3vw;
+    font-family: "silkserif";
+    font-weight: lighter;
+    font-style: italic;
+}#line1 h5
+{
+    text-align: right;
+    width: 4vw;
+}
+.line h1
+{
+    font-size: 6.7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Plain Light";
+}
+.line h2{
+    font-size: 6.7vw;
+    font-family: "Plain Light";
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 2vw;
+    opacity: 0;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glitch {
+    0%
+    {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color:#fff;
+        opacity: 0;
+    }
+    48%
+    {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color:#fff;
+        opacity: 1;
+    }
+    50%
+    {
+        font-family: "Silk serif";
+        -webkit-text-stroke: 0.3px #fff;
+        color:transparent;
+        opacity: 0;
+    }
+    100%
+    {
+        font-family: "Silk serif";
+        -webkit-text-stroke: 0.3px #fff;
+        color:transparent;
+        opacity: 1;
+    }
+}
