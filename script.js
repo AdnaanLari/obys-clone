@@ -1,4 +1,6 @@
-var tl=gsap.timeline();
+function LoadingScreen(){
+   // document.querySelector("#crsr").style.display="none";
+   var tl=gsap.timeline();
 
 tl.from(".line h1",{
     y:150,
@@ -31,7 +33,7 @@ tl.to(".line h2",{
 tl.to("#loader",{
    opacity:0,
    duration:0.2,
-   delay:3.4
+   delay:2.5
 })
 tl.from("#page1",{
    y:1200,
@@ -43,3 +45,27 @@ tl.from("#page1",{
 tl.to("#loader",{
    display:"none"
 })
+tl.from("#nav",{
+   opacity:0
+})
+
+tl.from(".hero h1 ,#hero1 h2",{
+   y:150,
+   stagger:0.2
+})
+}
+
+function CursorAnimation()
+{
+   document.addEventListener("mousemove",function(dets){
+      gsap.to("#crsr",{
+         left:dets.x,
+         top:dets.y,
+         })
+   })
+   Shery.makeMagnet("#nav2 h4", {
+   });
+}
+
+LoadingScreen();
+CursorAnimation();

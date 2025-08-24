@@ -8,6 +8,7 @@
 html , body{
     height: 100%;
     width: 100%;
+    cursor:none;
 }
 /* @font-face {
     font-family: ;
@@ -37,16 +38,18 @@ html , body{
     src: url(Fonts/silkserif-regularitalic-webfont.ttf);
     font-style: normal;
 }
-#main
+
+#crsr
 {
-    position: relative;
-    background-color: #030303;
-}
-#page1
-{
-    height: 100vh;
-    width: 100%;
-    background-color: #151515;
+    mix-blend-mode: difference;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-color: transparent;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 254, 254, 0.463);
+    transform: translate(-50%,-50%);
 }
 #loader
 {
@@ -72,7 +75,7 @@ html , body{
     gap:1.4vw;
     align-items: top;
     margin-right: 4vw;
-    height: 18vh;
+    height: 15vh;
 }
 #line1 h5 , h6
 {
@@ -80,7 +83,8 @@ html , body{
     font-family: "silkserif";
     font-weight: lighter;
     font-style: italic;
-}#line1 h5
+}
+#line1 h5
 {
     text-align: right;
     width: 4vw;
@@ -132,4 +136,66 @@ html , body{
         color:transparent;
         opacity: 1;
     }
+}
+#main
+{
+    position: relative;
+    background-color: #030303;
+}
+#page1
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+#page1 #nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2vw 8vw;
+}
+#nav #nav2
+{
+    width:120px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    gap:2.5vw;
+}
+#nav2 h4{
+    font-size: 1vw;
+    font-weight: 450;
+    font-family: Plain,Helvetica Neue,Arial,Noto Sans,sans-serif;
+}
+#nav h3
+{
+    width:5vw;
+    font-size: 1vw;
+    font-weight: 450;
+    font-family: Plain,Helvetica Neue,Arial,Noto Sans,sans-serif;
+}
+.hero
+{
+    height: fit-content;
+    width: 72%;
+    margin-left: 28%;
+    overflow: hidden;
+}
+.hero h1,h2
+{
+    text-transform: uppercase;
+    font-size: 7.5vw;
+    font-family: "Plain Light";
+    font-weight: 100;
+    line-height: 7.4vw;
+}
+.hero:nth-child(2)
+{
+    margin-top:12.8vh;
+}
+#hero1 span
+{
+    text-decoration:underline;
+    margin-right: 10px;
 }
