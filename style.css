@@ -181,6 +181,8 @@ html , body{
     width: 72%;
     margin-left: 28%;
     overflow: hidden;
+    position:relative;
+    z-index: 99999;
 }
 .hero h1,h2
 {
@@ -196,6 +198,12 @@ html , body{
 }
 #hero1 span
 {
-    text-decoration:underline;
     margin-right: 10px;
+    text-decoration: underline;
 }
+#hero1 span:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    text-decoration: none;
+}
+
