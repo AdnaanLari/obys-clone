@@ -178,7 +178,7 @@ html , body{
 .hero
 {
     height: fit-content;
-    width: 72%;
+    width: fit-content;
     margin-left: 28%;
     overflow: hidden;
     position:relative;
@@ -190,20 +190,41 @@ html , body{
     font-size: 7.5vw;
     font-family: "Plain Light";
     font-weight: 100;
-    line-height: 7.4vw;
+    line-height: 7vw;
 }
-.hero:nth-child(2)
+.hero:nth-child(3)
 {
     margin-top:12.8vh;
 }
-#hero1 span
+span
 {
-    margin-right: 10px;
-    text-decoration: underline;
+    margin-left: 10px;
+    font-size: 7.2vw;
+    font-family: "Plain Light";
 }
-#hero1 span:hover{
+#hero1 {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+#hero1 h2
+{
+    border-bottom: 10px solid #fff;
+}
+#hero1 h2:hover{
     -webkit-text-stroke: 1px #fff;
     color: transparent;
-    text-decoration: none;
+    border-bottom: 10px solid #ffffff00;
+}
+.test
+{ 
+    position: absolute;
+    top:28.5%;
+    left:19%
+}
+.test h2
+{
+    font-family: "Silk Serif";
+    font-size:3.4vw;
 }
 
